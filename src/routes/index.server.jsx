@@ -1,9 +1,10 @@
 import { Suspense } from "react";
 
-import '../assets/css/style.css'
 import FeaturedCollections from "../components/FeaturedCollections.server";
 import { Layout } from "../components/Layout.server";
-import CardExampleShow from "../components/CardExampleShow.server";
+import CardExampleShow from "../components/custom/CardExampleShow.server";
+import ExampleShowCollections from "../components/custom/ExampleShowCollections.server";
+import ProductsExample from "../components/custom/ProductsExample.server";
 
 export default function Home() {
   return (
@@ -12,7 +13,10 @@ export default function Home() {
         <CardExampleShow />
       </Suspense>
       <Suspense>
-        <FeaturedCollections />
+        <ExampleShowCollections />
+      </Suspense>
+      <Suspense>
+        <ProductsExample />
       </Suspense>
     </Layout>
   );
